@@ -12,7 +12,7 @@ chmod +x *.sh *.py
 
 Step 2
 
-Download GWAS summary statistics into ~/sumstats.
+Download GWAS summary statistics into ~/sumstats, using the 3 download_*.sh scripts.
 
 Step 3
 
