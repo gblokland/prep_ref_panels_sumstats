@@ -323,7 +323,6 @@ COMMENTBLOCK
 
 :<<'COMMENTBLOCK'
 
-
 cd ~/sumstats/Biomarkers/CRP/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 35459240-GCST90029070-EFO_0004458-Build37.f.tsv.gz --out CRP_sumstats.tsv \
@@ -331,10 +330,12 @@ python ~/opt/python_convert/sumstats.py csv \
 #UKB n=427367; CHARGE n = 148164; total n = 575531
 ###python $(python_convert)/sumstats.py mat --sumstats PGC_SCZ_2014.csv --out PGC_SCZ_2014.mat --ref 2558411_ref.bim --force
 
+
 cd ~/sumstats/Biomarkers/lymphocyte/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 27863252-GCST004632-EFO_0007993-Build37.f.tsv.gz --out lymphocyte_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+
 
 cd ~/sumstats/Biomarkers/granulocyte/
 python ~/opt/python_convert/sumstats.py csv \
@@ -408,17 +409,13 @@ for phenotype in Neuro_AD; do
 	~/sumstats/${phenotype}/${phenotype}_sumstats_BETA.tsv
 done
 
-
-
-
-
-
 :<<'COMMENTBLOCK'
 #For PRScs: SNP	A1	A2	BETA	SE
 for phenotype in CRP lymphocyte granulocyte; do
 	awk '{print $1, $5, $6, $8, $9}' ~/sumstats/Biomarkers/${phenotype}/${phenotype}_sumstats.tsv \
 	> ~/sumstats/Biomarkers/${phenotype}/${phenotype}_sumstats_PRScs.tsv
 done
+
 
 #For SBayesRC: 'SNP', 'A1', 'A2', 'Freq', 'b', 'se', 'p', 'N'
 for phenotype in CRP lymphocyte granulocyte; do
@@ -433,6 +430,12 @@ for phenotype in CRP lymphocyte granulocyte; do
 	~/sumstats/Biomarkers/${phenotype}/${phenotype}_sumstats_BETA.tsv
 done
 COMMENTBLOCK
+
+##Merge SNP info with frq file
+#python ~/opt/merge_and_sort_files.py ~/ref_panels/1KGPref/merged_whole_genome_snps.tsv \
+#~/ref_panels/1KGPref/EUR_frequencies.frq.tsv \
+#~/ref_panels/1KGPref/EUR_frequencies.tsv
+
 
 
 ##################################################################################################
