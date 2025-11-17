@@ -60,6 +60,23 @@ done
 #Lotta 2021 - kynurenine
 wget -r -np -R --reject="index.html*" -nH --cut-dirs=4 -e robots=off http://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90010001-GCST90011000/GCST90010747/
 
+#Biomarkers - immune
+#CRP - https://doi.org/10.1038/s41467-022-29650-5 
+mkdir -p ~/sumstats/Biomarkers/CRP && cd ~/sumstats/Biomarkers/CRP/
+wget -r -np -R "index.html*" -e robots=off --cut-dirs=8 https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90029001-GCST90030000/GCST90029070/harmonised/
+
+#Lymphocyte count GWAS: PMID 27863252 x adaptive immune response - https://doi.org/10.1016/j.cell.2016.10.042
+mkdir -p ~/sumstats/Biomarkers/lymphocyte && cd ~/sumstats/Biomarkers/lymphocyte/
+wget -r -np -R "index.html*" -e robots=off --cut-dirs=8 https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST004001-GCST005000/GCST004632/harmonised/
+
+#Granulocyte count GWAS: PMID 27863252 x innate immune response - https://doi.org/10.1016/j.cell.2016.10.042 
+mkdir -p ~/sumstats/Biomarkers/granulocyte && cd ~/sumstats/Biomarkers/granulocyte/
+wget -r -np -R "index.html*" -e robots=off --cut-dirs=8 https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST004001-GCST005000/GCST004614/harmonised/
+
+#Granulocytes are a type of white blood cell that has small granules inside them. These granules contain proteins. 
+#The specific types of granulocytes are neutrophils, eosinophils, and basophils.
+
+
 #BMI
 cd $sumstats_dir/BMI
 #BMI - AkiyamaM_28892062_GCST004904/
