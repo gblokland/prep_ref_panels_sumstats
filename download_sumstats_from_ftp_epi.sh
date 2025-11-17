@@ -68,13 +68,16 @@ wget -r -np -R "index.html*" -e robots=off --cut-dirs=8 https://ftp.ebi.ac.uk/pu
 #Lymphocyte count GWAS: PMID 27863252 x adaptive immune response - https://doi.org/10.1016/j.cell.2016.10.042
 mkdir -p ~/sumstats/Biomarkers/lymphocyte && cd ~/sumstats/Biomarkers/lymphocyte/
 wget -r -np -R "index.html*" -e robots=off --cut-dirs=8 https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST004001-GCST005000/GCST004632/harmonised/
+mv ftp.ebi.ac.uk/* ./ && rm -r ftp.ebi.ac.uk
 
 #Granulocyte count GWAS: PMID 27863252 x innate immune response - https://doi.org/10.1016/j.cell.2016.10.042 
 mkdir -p ~/sumstats/Biomarkers/granulocyte && cd ~/sumstats/Biomarkers/granulocyte/
 wget -r -np -R "index.html*" -e robots=off --cut-dirs=8 https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST004001-GCST005000/GCST004614/harmonised/
+mv ftp.ebi.ac.uk/* ./ && rm -r ftp.ebi.ac.uk
 
 #Granulocytes are a type of white blood cell that has small granules inside them. These granules contain proteins. 
 #The specific types of granulocytes are neutrophils, eosinophils, and basophils.
+mv ftp.ebi.ac.uk/* ./ && rm -r ftp.ebi.ac.uk
 
 
 #BMI
