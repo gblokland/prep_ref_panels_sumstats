@@ -77,49 +77,64 @@ python ~/opt/python_convert/sumstats.py csv \
 
 ##########
 
-cd ~/sumstats/Psych_BIP/
-python ~/opt/python_convert/sumstats.py csv \
---sumstats bip2024_eur_noUKB_no23andMe.gz --out Psych_BIP_sumstats.tsv \
---force --auto --head 5 --chr CHR --bp BP --snp SNP --pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
-
-cd ~/sumstats/Psych_MDD/
-python ~/opt/python_convert/sumstats.py csv \
---sumstats ssf/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz --out Psych_MDD_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp rsid --beta beta --se standard_error --pval p_value --ncase ncases --ncontrol ncontrols --frq effect_allele_frequency
-
-cd ~/sumstats/Psych_SCZ/
-python ~/opt/python_convert/sumstats.py csv \
---sumstats SCZ3_Trubetskoy2022-sumstats/PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz --out Psych_SCZ_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
-
 cd ~/sumstats/Psych_ADHD/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out granulocyte_sumstats.tsv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_ADHD_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_ASD/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out granulocyte_sumstats.tsv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_ASD_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
 
-cd ~/sumstats/Psych_AN/
+cd ~/sumstats/Psych_ANX/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out granulocyte_sumstats.tsv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_ANX_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+
+cd ~/sumstats/Psych_BIP/
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats bip2024_eur_noUKB_no23andMe.gz \
+--out Psych_BIP_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP --pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
+
+cd ~/sumstats/Psych_ED/
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats bip2024_eur_noUKB_no23andMe.gz \
+--out Psych_ED_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP --pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
+
+cd ~/sumstats/Psych_MDD/
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats ssf/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz \
+--out Psych_MDD_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp rsid --beta beta --se standard_error --pval p_value --ncase ncases --ncontrol ncontrols --frq effect_allele_frequency
 
 cd ~/sumstats/Psych_OCD/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out granulocyte_sumstats.tsv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_OCD_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_PTSD/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out granulocyte_sumstats.tsv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_PTSD_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+
+cd ~/sumstats/Psych_SCZ/
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats SCZ3_Trubetskoy2022-sumstats/PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz \
+--out Psych_SCZ_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_SUD/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out granulocyte_sumstats.tsv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_SUD_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
 
 ##########
