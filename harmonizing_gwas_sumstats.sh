@@ -109,11 +109,19 @@ python ~/opt/python_convert/sumstats.py csv \
 
 cd ~/sumstats/Psych_MDD/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ssf/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz \
---out Psych_MDD_sumstats.tsv \
+--sumstats MDD3/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz \
+--out Psych_MDD3_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp rsid --beta beta --se standard_error --pval p_value --ncase ncases --ncontrol ncontrols --frq effect_allele_frequency
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats MDD4/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz \
+--out Psych_MDD4_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp rsid --beta beta --se standard_error --pval p_value --ncase ncases --ncontrol ncontrols --frq effect_allele_frequency
 
 cd ~/sumstats/Psych_OCD/
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_OCD_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
 --out Psych_OCD_sumstats.tsv \
