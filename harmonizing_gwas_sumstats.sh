@@ -89,7 +89,7 @@ python ~/opt/python_convert/sumstats.py csv \
 
 cd ~/sumstats/Psych_SCZ/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz --out Psych_SCZ_sumstats.tsv \
+--sumstats SCZ3_Trubetskoy2022-sumstats/PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz --out Psych_SCZ_sumstats.tsv \
 --force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_ADHD/
