@@ -79,135 +79,222 @@ python ~/opt/python_convert/sumstats.py csv \
 
 cd ~/sumstats/Psych_ADHD/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
---out Psych_ADHD_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats ADHD2_Demontis2019/27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_ADHD2_Demontis2019_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats ADHD3_Demontis2022/27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_ADHD3_Demontis2022_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats ADHDSexSpecific_Martin2018/27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_ADHDSexSpecific_Martin2018_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_ASD/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
 --out Psych_ASD_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_ASD_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_ANX/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
 --out Psych_ANX_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_ANX_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_BIP/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats bip2024_eur_noUKB_no23andMe.gz \
 --out Psych_BIP_sumstats.tsv \
---force --auto --head 5 --chr CHR --bp BP --snp SNP --pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats bip2024_eur_noUKB_no23andMe.gz \
+--out Psych_BIP_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats bip2024_eur_noUKB_no23andMe.gz \
+--out Psych_BIP_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
 
 cd ~/sumstats/Psych_ED/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats bip2024_eur_noUKB_no23andMe.gz \
 --out Psych_ED_sumstats.tsv \
---force --auto --head 5 --chr CHR --bp BP --snp SNP --pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
+
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats bip2024_eur_noUKB_no23andMe.gz \
+--out Psych_ED_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--pval P --ncase Nca --ncontrol Nco --frq HRC_FRQ_A1
 
 cd ~/sumstats/Psych_MDD/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats MDD3/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz \
 --out Psych_MDD3_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp rsid --beta beta --se standard_error --pval p_value --ncase ncases --ncontrol ncontrols --frq effect_allele_frequency
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp rsid \
+--beta beta --se standard_error --pval p_value --ncase ncases --ncontrol ncontrols --frq effect_allele_frequency
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats MDD4/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz \
 --out Psych_MDD4_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp rsid --beta beta --se standard_error --pval p_value --ncase ncases --ncontrol ncontrols --frq effect_allele_frequency
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp rsid \
+--beta beta --se standard_error --pval p_value --ncase ncases --ncontrol ncontrols --frq effect_allele_frequency
 
-cd ~/sumstats/Psych_OCD/
+cd ~/sumstats/Psych_OCD-TS/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
 --out Psych_OCD_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
 --out Psych_OCD_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_PTSD/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
 --out Psych_PTSD_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_PTSD_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_SCZ/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats SCZ3_Trubetskoy2022-sumstats/PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz \
 --out Psych_SCZ_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats SCZ3_Trubetskoy2022-sumstats/PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz \
+--out Psych_SCZ_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_SUD/
 python ~/opt/python_convert/sumstats.py csv \
 --sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
 --out Psych_SUD_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Psych_SUD_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 ##########
 
 cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA2_ICV_Combined_GenomeControlled_Jan23.tbl.gz --out BrainMRI_ICV_sumstats.tsv \
---force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID --beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
+--sumstats ENIGMA2_ICV_Combined_GenomeControlled_Jan23.tbl.gz \
+--out BrainMRI_ICV_sumstats.tsv \
+--force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID \
+--beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
 
 cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA2_MeanAccumbens_Combined_GenomeControlled_Jan23.tbl.gz --out BrainMRI_Accumbens_sumstats.tsv \
---force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID --beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
+--sumstats ENIGMA2_MeanAccumbens_Combined_GenomeControlled_Jan23.tbl.gz \
+--out BrainMRI_Accumbens_sumstats.tsv \
+--force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID \
+--beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
 
 cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA2_MeanAmygdala_Combined_GenomeControlled_Jan23.tbl.gz --out BrainMRI_Amygdala_sumstats.tsv \
---force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID --beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
+--sumstats ENIGMA2_MeanAmygdala_Combined_GenomeControlled_Jan23.tbl.gz \
+--out BrainMRI_Amygdala_sumstats.tsv \
+--force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID \
+--beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
 
 cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA2_MeanCaudate_Combined_GenomeControlled_Jan23.tbl.gz --out BrainMRI_Caudate_sumstats.tsv \
---force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID --beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
+--sumstats ENIGMA2_MeanCaudate_Combined_GenomeControlled_Jan23.tbl.gz \
+--out BrainMRI_Caudate_sumstats.tsv \
+--force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID \
+--beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
 
 cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz --out BrainMRI_Hippocampus_sumstats.tsv \
---force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID --beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
+--sumstats ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz \
+--out BrainMRI_Hippocampus_sumstats.tsv \
+--force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID \
+--beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
 
 cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA2_MeanPallidum_Combined_GenomeControlled_Jan23.tbl.gz --out BrainMRI_Pallidum_sumstats.tsv \
---force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID --beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
+--sumstats ENIGMA2_MeanPallidum_Combined_GenomeControlled_Jan23.tbl.gz \
+--out BrainMRI_Pallidum_sumstats.tsv \
+--force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID \
+--beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
 
 cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA2_MeanPutamen_Combined_GenomeControlled_Jan23.tbl.gz --out BrainMRI_Putamen_sumstats.tsv \
---force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID --beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
+--sumstats ENIGMA2_MeanPutamen_Combined_GenomeControlled_Jan23.tbl.gz \
+--out BrainMRI_Putamen_sumstats.tsv \
+--force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID \
+--beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
 
 cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA2_MeanThalamus_Combined_GenomeControlled_Jan23.tbl.gz --out BrainMRI_Thalamus_sumstats.tsv \
---force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID --beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
+--sumstats ENIGMA2_MeanThalamus_Combined_GenomeControlled_Jan23.tbl.gz \
+--out BrainMRI_Thalamus_sumstats.tsv \
+--force --auto --head 5 --chrpos CHR_BP_hg19b37 --a1 Effect_Allele --a2 Non_Effect_Allele --snp RSID \
+--beta Effect_Beta --se StdErr --pval Pvalue --frq Freq_European_1000Genomes
 
 ##########
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_Global/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wo_Mean_Full_SurfArea_20190429.txt.gz --out BrainMRI_SA_GC_sumstats.tsv \
---force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
+--sumstats ENIGMA3_mixed_se_wo_Mean_Full_SurfArea_20190429.txt.gz \
+--out BrainMRI_SA_GC_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_Global/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wo_Mean_Full_Thickness_20190429.txt.gz --out BrainMRI_CT_GC_sumstats.tsv \
---force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
+--sumstats ENIGMA3_mixed_se_wo_Mean_Full_Thickness_20190429.txt.gz \
+--out BrainMRI_CT_GC_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_Global_noGC/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wo_Mean_Full_SurfArea_20190429_noGC.txt.gz --out BrainMRI_SA_noGC_sumstats.tsv \
---force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA --se SE --pval P --frq FREQ1
+--sumstats ENIGMA3_mixed_se_wo_Mean_Full_SurfArea_20190429_noGC.txt.gz \
+--out BrainMRI_SA_noGC_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--beta BETA --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_Global_noGC/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wo_Mean_Full_Thickness_20190429_noGC.txt.gz --out BrainMRI_CT_noGC_sumstats.tsv \
---force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA --se SE --pval P --frq FREQ1
+--sumstats ENIGMA3_mixed_se_wo_Mean_Full_Thickness_20190429_noGC.txt.gz \
+--out BrainMRI_CT_noGC_sumstats.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--beta BETA --se SE --pval P --frq FREQ1
 
 ##########
 
@@ -216,42 +303,50 @@ inferiortemporal insula isthmuscingulate lateraloccipital lateralorbitofrontal l
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_withGlobal/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wSA_Mean_${roi}_surfavg_20190429.txt.gz --out BrainMRI_SA${roi}_wGlobal_GC_sumstats.tsv \
+--sumstats ENIGMA3_mixed_se_wSA_Mean_${roi}_surfavg_20190429.txt.gz \
+--out BrainMRI_SA${roi}_wGlobal_GC_sumstats.tsv \
 --force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_withGlobal/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wTHICK_Mean_${roi}_thickavg_20200522.txt.gz --out BrainMRI_CT${roi}_wGlobal_GC_sumstats.tsv \
+--sumstats ENIGMA3_mixed_se_wTHICK_Mean_${roi}_thickavg_20200522.txt.gz \
+--out BrainMRI_CT${roi}_wGlobal_GC_sumstats.tsv \
 --force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_withGlobal_noGC/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wSA_Mean_${roi}_surfavg_20190429_noGC.txt.gz --out BrainMRI_SA${roi}_wGlobal_noGC_sumstats.tsv \
+--sumstats ENIGMA3_mixed_se_wSA_Mean_${roi}_surfavg_20190429_noGC.txt.gz \
+--out BrainMRI_SA${roi}_wGlobal_noGC_sumstats.tsv \
 --force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_withGlobal_noGC/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wTHICK_Mean_${roi}_thickavg_20200522_noGC.txt.gz --out BrainMRI_CT${roi}_wGlobal_noGC_sumstats.tsv \
+--sumstats ENIGMA3_mixed_se_wTHICK_Mean_${roi}_thickavg_20200522_noGC.txt.gz \
+--out BrainMRI_CT${roi}_wGlobal_noGC_sumstats.tsv \
 --force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_withoutGlobal/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wo_Mean_${roi}_surfavg_20190429.txt.gz --out BrainMRI_SA${roi}_woGlobal_GC_sumstats.tsv \
+--sumstats ENIGMA3_mixed_se_wo_Mean_${roi}_surfavg_20190429.txt.gz \
+--out BrainMRI_SA${roi}_woGlobal_GC_sumstats.tsv \
 --force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_withoutGlobal/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wo_Mean_${roi}_thickavg_20200522.txt.gz --out BrainMRI_CT${roi}_woGlobal_GC_sumstats.tsv \
+--sumstats ENIGMA3_mixed_se_wo_Mean_${roi}_thickavg_20200522.txt.gz \
+--out BrainMRI_CT${roi}_woGlobal_GC_sumstats.tsv \
 --force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_withoutGlobal_noGC/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wo_Mean_${roi}_surfavg_20190429_noGC.txt.gz --out BrainMRI_SA${roi}_woGlobal_noGC_sumstats.tsv \
+--sumstats ENIGMA3_mixed_se_wo_Mean_${roi}_surfavg_20190429_noGC.txt.gz \
+--out BrainMRI_SA${roi}_woGlobal_noGC_sumstats.tsv \
 --force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
 
 cd ~/sumstats/Brain_Structure/ENIGMA3_withoutGlobal_noGC/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ENIGMA3_mixed_se_wo_Mean_${roi}_thickavg_20200522_noGC.txt.gz --out BrainMRI_CT${roi}_woGlobal_noGC_sumstats.tsv \
+--sumstats ENIGMA3_mixed_se_wo_Mean_${roi}_thickavg_20200522_noGC.txt.gz \
+--out BrainMRI_CT${roi}_woGlobal_noGC_sumstats.tsv \
 --force --auto --head 5 --chr CHR --bp BP --snp SNP --beta BETA1 --se SE --pval P --frq FREQ1
 
 done
@@ -260,70 +355,96 @@ done
 
 cd ~/sumstats/Cognition_IQ/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out Cognition_IQ_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Cognition_IQ_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Cognition_GCA/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out Cognition_GCA_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Cognition_GCA_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Cognition_fx/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out Cognition_fx_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out Cognition_fx_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 :<<'COMMENTBLOCK'
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Brain_Function/
 python ~/opt/python_convert/sumstats.py csv \
---sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz --out BrainMRI_FC_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id --beta beta --se standard_error --pval p_value --n-val 173480
+--sumstats 27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--out BrainMRI_FC_sumstats.tsv \
+--force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--beta beta --se standard_error --pval p_value --n-val 173480
 
 COMMENTBLOCK
 
