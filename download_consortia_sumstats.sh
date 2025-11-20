@@ -406,6 +406,7 @@ wget --user-agent="Mozilla/5.0" -O pgc_ptsd2024_summary_statistics.zip "https://
 unzip pgc_ptsd2024_summary_statistics.zip
 zless eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 68 #First 66 lines are comments
 ####CHROM  ID      POS     A1      A2      FREQ    NEFF    Z       P       DIRE
+###2	rs6759922	22450249	A	G	0.4573	638463.00	8.821	1.134e-18	+++-+--+--+++++-++-++++----++-+-++-+-+++++++++++?+++++++++-++-+
 
 #PGC-SCZ
 mkdir -p ~/sumstats/Psych_SCZ && cd ~/sumstats/Psych_SCZ/
