@@ -265,10 +265,20 @@ unzip pgc_an2019_summary_statistics.zip
 zcat pgcAN2.2019-07.vcf.tsv.gz | head -n 71 #First 70 lines are comments
 #CHROM   POS     ID      REF     ALT     BETA    SE      PVAL    NGT     IMPINFO NEFFDIV2        NCAS    NCON    DIRE
 
-#PGC-MDD
-mkdir -p ~/sumstats/Psych_MDD && cd ~/sumstats/Psych_MDD/
-wget -O pgc_mdd2024_gwas_summary.zip "https://figshare.com/ndownloader/articles/22745573/versions/3"
-wget -O pgc_mdd2025_summary_statistics.zip "https://figshare.com/ndownloader/articles/27061255/versions/4"
+#PGC-MDD, Wray2018
+mkdir -p ~/sumstats/Psych_MDD/MDD2_Wray2018 && cd ~/sumstats/Psych_MDD/MDD2_Wray2018/
+wget --user-agent="Mozilla/5.0" -O pgc_mdd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672085/versions/2"
+unzip pgc_mdd2018_summary_statistics.zip
+
+#PGC-MDD, Howard2019
+mkdir -p ~/sumstats/Psych_MDD/MDD3_Howard2019 && cd ~/sumstats/Psych_MDD/MDD3_Howard2019/
+wget -O PGC-mdd2019edinburgh-DS_10283_3203.zip https://datashare.ed.ac.uk/download/DS_10283_3203.zip
+unzip PGC-mdd2019edinburgh-DS_10283_3203.zip
+
+#PGC-MDD, Adams2025
+mkdir -p ~/sumstats/Psych_MDD/MDD4_Adams2025 && cd ~/sumstats/Psych_MDD/MDD4_Adams2025/
+wget --user-agent="Mozilla/5.0" -O pgc_mdd2024_gwas_summary.zip "https://figshare.com/ndownloader/articles/22745573/versions/3"
+wget --user-agent="Mozilla/5.0" -O pgc_mdd2025_summary_statistics.zip "https://figshare.com/ndownloader/articles/27061255/versions/4"
 unzip pgc_mdd2024_gwas_summary.zip
 unzip pgc_mdd2025_summary_statistics.zip
 zcat ssf/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz | head -n 2
