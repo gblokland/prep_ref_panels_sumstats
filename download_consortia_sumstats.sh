@@ -378,19 +378,27 @@ zless TS_Oct2018.gz | head -n 2
 mkdir -p ~/sumstats/Psych_PTSD/PTSD1_Duncan2018 && cd ~/sumstats/Psych_PTSD/PTSD1_Duncan2018/
 wget --user-agent="Mozilla/5.0" -O pgc_ptsd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672106/versions/1"
 unzip pgc_ptsd2018_summary_statistics.zip
-zless eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 2
+unzip AA.zip
+unzip All.zip
+unzip EA.zip
+zless SORTED_PTSD_AA7_ALL_study_specific_PCs1.txt | head -n 2
 
-#PGC-PTSD, Duncan2018
-mkdir -p ~/sumstats/Psych_PTSD/PTSD1_Duncan2018 && cd ~/sumstats/Psych_PTSD/PTSD1_Duncan2018/
+#PGC-PTSD-SexStratified, Duncan2018
+mkdir -p ~/sumstats/Psych_PTSD/PTSD1SexStratified_Duncan2018 && cd ~/sumstats/Psych_PTSD/PTSD1SexStratified_Duncan2018/
 wget --user-agent="Mozilla/5.0" -O pgc_ptsd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672106/versions/1"
 unzip pgc_ptsd2018_summary_statistics.zip
-zless eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 2
+unzip AA.zip
+unzip All.zip
+unzip EA.zip
+zless PTSD_Female_European_ancestry.gz | head -n 2
 
 #PGC-PTSD, Nievergelt2019
 mkdir -p ~/sumstats/Psych_PTSD/PTSD2_Nievergelt2019 && cd ~/sumstats/Psych_PTSD/PTSD2_Nievergelt2019/
 wget --user-agent="Mozilla/5.0" -O pgc_ptsd2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672133/versions/1"
 unzip pgc_ptsd2019_summary_statistics.zip
-zless eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 2
+zless pts_eur_freeze2_overall.results.gz | head -n 2
+###CHR	SNP	BP	A1	A2	FRQ_A_23212	FRQ_U_151447	INFO	OR	SE	P	ngt	Direction	HetISqt	HetDf	HetPVa	Nca	Nco	Neff
+###6	rs34517852	157789333	A	T	0.3560	0.3342	0.869874	1.11572	0.0185	3.164e-09	0	++--++?+++++--+++++++-?-++++--++++++?--+++-	14.2	39	0.2206	12080	33446	30273.8
 
 #PGC-PTSD, Nievergelt2024
 mkdir -p ~/sumstats/Psych_PTSD/PTSD3_Nievergelt2024 && cd ~/sumstats/Psych_PTSD/PTSD3_Nievergelt2024/
