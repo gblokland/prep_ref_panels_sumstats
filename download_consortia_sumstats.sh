@@ -267,6 +267,8 @@ mkdir -p ~/sumstats/Psych_ASD/ASD3_Grove2019 && cd ~/sumstats/Psych_ASD/ASD3_Gro
 wget --user-agent="Mozilla/5.0" -O pgc_asd2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671998/versions/1"
 unzip pgc_asd2019_summary_statistics.zip
 zless iPSYCH-PGC_ASD_Nov2017.gz | head -n 2
+###CHR	SNP	BP	A1	A2	INFO	OR	SE	P
+###8	rs62513865	101592213	T	C	0.949	1.00652	0.027	0.8086
 
 #PGC-BIP, Stahl2019
 mkdir -p ~/sumstats/Psych_BIP/BIP2_Stahl2019 && cd ~/sumstats/Psych_BIP/BIP2_Stahl2019/
@@ -292,46 +294,61 @@ zcat bip2024_eur_noUKB_no23andMe.gz | head -n 2
 ###SNP CHR BP A1 A2 INFO OR SE P ngt Direction HetISqt HetDf HetPVa Nca Nco Neff_half HRC_FRQ_A1
 ###rs10 7 92383888 A C 0.904 1.01207 0.0176 0.4974 1 ---+++- 0 60 0.7938 51493 661850 68548.53 0.0529979
 
-#PGC-ED
+#PGC-ED, Duncan2017
 mkdir -p ~/sumstats/Psych_ED/AN1_Duncan2017 && cd ~/sumstats/Psych_ED/AN1_Duncan2017/
 wget --user-agent="Mozilla/5.0" -O pgc_an2017_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671971/versions/1"
 unzip pgc_an2017_summary_statistics.zip
 zless pgc.ed.freeze1.summarystatistics.July2017.txt.gz | head -n 2
+###CHR	SNP	BP	A1	A2	INFO	OR	SE	P	ngt
+###1	chr1:100012367	100012367	T	C	0.842	3.84164	1.5	0.3694	0
 
+#PGC-ED, Watson2019
 mkdir -p ~/sumstats/Psych_ED/AN2_Watson2019 && cd ~/sumstats/Psych_ED/AN2_Watson2019/
 wget --user-agent="Mozilla/5.0" -O pgc_an2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671980/versions/1"
 unzip pgc_an2019_summary_statistics.zip
 zless pgcAN2.2019-07.vcf.tsv.gz | head -n 72 #First 70 lines are comments
-#CHROM   POS     ID      REF     ALT     BETA    SE      PVAL    NGT     IMPINFO NEFFDIV2        NCAS    NCON    DIRE
+###CHROM	POS	ID	REF	ALT	BETA	SE	PVAL	NGT	IMPINFO	NEFFDIV2	NCAS	NCON	DIRE
+###8	101592213	rs62513865	T	C	0.00919757235404205	0.0265	0.7276	0	0.955	23160.95	16992	55525	-+-+----+------+--+-++++-++-++++-
 
 #PGC-MDD, Wray2018
 mkdir -p ~/sumstats/Psych_MDD/MDD2_Wray2018 && cd ~/sumstats/Psych_MDD/MDD2_Wray2018/
 wget --user-agent="Mozilla/5.0" -O pgc_mdd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672085/versions/2"
 unzip pgc_mdd2018_summary_statistics.zip
-zless pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz | head -n 2
-
-wget --user-agent="Mozilla/5.0" -O daner_pgc_mdd_meta_w2_no23andMe_rmUKBB.gz "https://figshare.com/ndownloader/files/39504667"
-zless pgcAN2.2019-07.vcf.tsv.gz | head -n 71 #First 70 lines are comments
+###wget --user-agent="Mozilla/5.0" -O daner_pgc_mdd_meta_w2_no23andMe_rmUKBB.gz "https://figshare.com/ndownloader/files/39504667"
+zless daner_pgc_mdd_meta_w2_no23andMe_rmUKBB.gz | head -n 2
+###CHR	SNP	BP	A1	A2	FRQ_A_45396	FRQ_U_97250	INFO	OR	SE	P	ngt	Direction	HetISqt	HetDf	HetPVa	Nca	Nco	Neff_half
+###1	rs189107123	10611	C	G	0.984	0.984	0.237	0.88515	0.0764	0.1103	0	--??-	24.3	2	0.2667	41636	81126	48057.6
 
 #PGC-MDD, Howard2019
 mkdir -p ~/sumstats/Psych_MDD/MDD3_Howard2019 && cd ~/sumstats/Psych_MDD/MDD3_Howard2019/
 wget -O PGC-mdd2019edinburgh-DS_10283_3203.zip https://datashare.ed.ac.uk/download/DS_10283_3203.zip
 unzip PGC-mdd2019edinburgh-DS_10283_3203.zip
-zless pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz | head -n 2
+less PGC_UKB_depression_genome-wide.txt | head -n 2
+###MarkerName A1 A2 Freq LogOR StdErrLogOR P
+###rs2326918 a g 0.8452 0.0106 0.006 0.07561
 
-#PGC-MDD, Adams2025
+#PGC-MDD-Symptoms, Adams2024
 mkdir -p ~/sumstats/Psych_MDD/MDDSymptoms_Adams2024 && cd ~/sumstats/Psych_MDD/MDDSymptoms_Adams2024/
 wget --user-agent="Mozilla/5.0" -O pgc_mdd2024symptoms_summary_statistics.zip "https://figshare.com/ndownloader/articles/22745573/versions/3"
 unzip pgc_mdd2024symptoms_summary_statistics.zip
-zless pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz | head -n 2
+zless mdd_symptoms_2023-Clin-MDD1_depressed.txt.gz | head -n 68 #first 66 lines are header info
+####CHROM	POS	ID	A1	A2	BETA	SE	PVAL	FCAS	FCON	IMPINFO	NEFF	NCAS	NCON
+###1	91536	rs6702460	T	G	-0.024200483705658367	0.1125	0.83	0.391	NA	0.969	3064.2	6943	1261
 
 #PGC-MDD, Adams2025
 mkdir -p ~/sumstats/Psych_MDD/MDD4_Adams2025 && cd ~/sumstats/Psych_MDD/MDD4_Adams2025/
 wget --user-agent="Mozilla/5.0" -O pgc_mdd2025_summary_statistics.zip "https://figshare.com/ndownloader/articles/27061255/versions/4"
 unzip pgc_mdd2025_summary_statistics.zip
-zless pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz | head -n 2
+zless pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11.tsv.gz | head -n 2
 ###chromosome      base_pair_location      effect_allele   other_allele    beta    standard_error  effect_allele_frequency p_value   rsid    info    effect_allele_frequency_cases   n       ncases  ncontrols       heterogeneity_i2        heterogeneity_df  heterogeneity_p_value
 ###1       753541  A       G       0.004101577021075048    0.0055  0.155   0.4614  rs2073813       0.847   0.15    829249.58310128   1035355 31.1    16      0.1082
+
+#PGC-OCD-TS
+mkdir -p ~/sumstats/Psych_OCD-TS/HOARDING2022 && cd ~/sumstats/Psych_OCD-TS/HOARDING2022/
+wget --user-agent="Mozilla/5.0" -O hoarding2022.vcf.tsv.gz "https://figshare.com/ndownloader/files/39399566"
+zless hoarding2022.vcf.tsv.gz | head -n 74 #First 72 lines are header info
+###CHROM	ID	POS	A1	A2	FCAS	FCON	IMPINFO	BETA	SE	PVAL	DIRE	NCAS	NCON	NEFFDIV2
+###8	rs117278216	100516008	C	T	0.0179	0.0179	0.936	-0.0347985055426955	0.0325	0.2835	++?+?-	15594	15594	15594
 
 #PGC-OCD-TS
 mkdir -p ~/sumstats/Psych_OCD-TS/OCD1 && cd ~/sumstats/Psych_OCD-TS/OCD1/
@@ -341,11 +358,27 @@ zless ocd_aug2017.gz | head -n 2
 ###CHR     SNP     BP      A1      A2      INFO    OR      SE      P
 ###1       rs141242758     734349  T       C       0.6683  1.07358 0.1088  0.5144
 
-#PGC-OCD-TS
+#PGC-OCD-TS, Strom2025
 mkdir -p ~/sumstats/Psych_OCD-TS/OCD2_Strom2025 && cd ~/sumstats/Psych_OCD-TS/OCD2_Strom2025/
 wget -O pgc_ocd2025_summary_statistics.zip "https://figshare.com/ndownloader/articles/28707155/versions/4"
 unzip pgc_ocd2025_summary_statistics.zip
-zless ocd_aug2017.gz | head -n 2
+zless daner_OCDmeta_wo23andMe_LOOUKBB_080425.gz | head -n 2
+###CHR	SNP	BP	A1	A2	FRQ_A_22717	FRQ_U_988884	INFO	OR	SE	P	ngt	Direction	HetISqt	HetDf	HetPVa	Nca	Nco	Neff_half
+###8	rs117278216	100516008	C	T	0.0175	0.0164	0.916	1.01207	0.047	0.7988	0	+-+?-?++?----+--??+???????	0.0	13	0.5677	19794	910860	32507.10
+
+#PGC-OCD-TS, Yu2019
+mkdir -p ~/sumstats/Psych_OCD-TS/TS1_Yu2019 && cd ~/sumstats/Psych_OCD-TS/TS1_Yu2019/
+wget --user-agent="Mozilla/5.0" -O pgc_ts2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672232/versions/1"
+unzip pgc_ts2019_summary_statistics.zip
+zless TS_Oct2018.gz | head -n 2
+###SNP CHR BP A1 A2 INFO OR SE P
+###rs2326918 6 130840091 A G 0.9858 0.965412 0.0349 0.3139
+
+#PGC-PTSD, Duncan2018
+mkdir -p ~/sumstats/Psych_PTSD/PTSD1_Duncan2018 && cd ~/sumstats/Psych_PTSD/PTSD1_Duncan2018/
+wget --user-agent="Mozilla/5.0" -O pgc_ptsd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672106/versions/1"
+unzip pgc_ptsd2018_summary_statistics.zip
+zless eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 2
 
 #PGC-PTSD, Duncan2018
 mkdir -p ~/sumstats/Psych_PTSD/PTSD1_Duncan2018 && cd ~/sumstats/Psych_PTSD/PTSD1_Duncan2018/
