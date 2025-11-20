@@ -216,27 +216,48 @@ wget https://storage.googleapis.com/finngen-public-data-r12/summary_stats/releas
 wget https://storage.googleapis.com/finngen-public-data-r12/summary_stats/release/finngen_R12_F5_UNSORG.gz
 wget https://storage.googleapis.com/finngen-public-data-r12/summary_stats/release/finngen_R12_F5_VASCDEM.gz
 
-#PGC-SCZ
-mkdir -p ~/sumstats/Psych_SCZ && cd ~/sumstats/Psych_SCZ/
-wget -O pgc_scz2022_sumstats.zip "https://figshare.com/ndownloader/articles/19426775/versions/7"
-unzip pgc_scz2022_sumstats.zip
-zcat PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz | head -n 75 #First 73 lines are comments
-# #CHROM  ID      POS     A1      A2      FREQ    NEFF    Z       P       DIRE
-#2       rs6759922       22450249        A       G       0.4573  638463.00       8.821   1.134e-18       +++-+--+-
-###cohortList="ipsych,bep1b,braz2,butr,celso,cgs1c,clz2a,cogs1,du2aa,enric,eu5me,eusp2,eutu2,gap1a,gawli,geba1,gpc2a,gro2a,grtr,lemu,mcqul,mosc2,paris,price,rive1,rouin,sb2aa,serri,to10c,uktr,viyo1,xaarh,xaber,xajsz,xasrb,xboco,xbuls,xcati,xcaws,xcims,xclm2,xclo3,xcou3,xdenm,xdubl,xedin,xegcu,xersw,xfi3m,xfii6,xgras,xirwt,xjr3a,xjr3b,xjri6,xjrsa,xlacw,xlie2,xlie5,xlktu,xmgs2,xmsaf,xmunc,xpewb,xpews,xpfla,xport,xs234,xswe1,xswe5,xswe6,xtop8,xucla,xuclo,xume2,xzhh1"
-#It doesn't seem to include ukbb
+#PGC-ADHD, ADHD3_Demontis2022
+mkdir -p ~/sumstats/Psych_ADHD/ADHD3_Demontis2022 && cd ~/sumstats/Psych_ADHD/ADHD3_Demontis2022/
+wget -O pgc_adhd2022_summary_statistics.zip "https://figshare.com/ndownloader/articles/22564390/versions/1"
+unzip pgc_adhd2022_summary_statistics.zip
+zcat ADHD2022_iPSYCH_deCODE_PGC.meta.gz | head -n 2
 
-#PGC-psychotic symptoms or functioning level
-mkdir -p ~/sumstats/Psych_SCZ_sx && cd ~/sumstats/Psych_SCZ_sx/
-wget -nH -r -np --cut-dirs=6 -e robots=off --reject="*index.html?*" https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90042001-GCST90043000/GCST90042791/harmonised/
+#PGC-ADHD, ADHDSexSpecific_Martin2018
+mkdir -p ~/sumstats/Psych_ADHD/ADHDSexSpecific_Martin2018 && cd ~/sumstats/Psych_ADHD/ADHDSexSpecific_Martin2018/
+###wget -O pgc_adhd2022_summary_statistics.zip "https://figshare.com/ndownloader/articles/22564390/versions/1"
+###unzip pgc_adhd2022_summary_statistics.zip
+###zcat ADHD2022_iPSYCH_deCODE_PGC.meta.gz | head -n 2
+
+#PGC-ANX, Forstner2021 and Otawa2026
+mkdir -p ~/sumstats/Psych_ANX/panic2019 && cd ~/sumstats/Psych_ANX/panic2019/
+wget --user-agent="Mozilla/5.0" -O pgc-panic2019.vcf.tsv.gz "https://figshare.com/ndownloader/files/30731276"
+###zcat pgc-panic2019.vcf.tsv.gz | head -n 2
+
+mkdir -p ~/sumstats/Psych_ANX/anx2016 && cd ~/sumstats/Psych_ANX/anx2016/
+wget --user-agent="Mozilla/5.0" -O pgc-anx2016_summary_statistics.zip "https://figshare.com/ndownloader/articles/14842689/versions/1"
+unzip pgc-anx2016_summary_statistics.zip
+###zcat pgc-panic2019.vcf.tsv.gz | head -n 2
+
+#PGC-ASD
+mkdir -p ~/sumstats/Psych_ASD/ASD3_Grove2019 && cd ~/sumstats/Psych_ASD/ASD3_Grove2019/
+wget -O pgc_asd2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671989/versions/1"
+unzip pgc_asd2019_summary_statistics.zip
+zcat iPSYCH-PGC_ASD_Nov2017.gz | head -n 2
 
 #PGC-BIP
-mkdir -p ~/sumstats/Psych_BIP && cd ~/sumstats/Psych_BIP/
+mkdir -p ~/sumstats/Psych_BIP/BIP4_OConnell2024 && cd ~/sumstats/Psych_BIP/BIP4_OConnell2024/
 wget -O pgc_bip2024_summary_statistics.zip "https://figshare.com/ndownloader/articles/27216117/versions/2"
 unzip pgc_bip2024_summary_statistics.zip
 zcat bip2024_eur_noUKB_no23andMe.gz | head -n 2
 #SNP CHR BP A1 A2 INFO OR SE P ngt Direction HetISqt HetDf HetPVa Nca Nco Neff_half HRC_FRQ_A1
 #rs10 7 92383888 A C 0.904 1.01207 0.0176 0.4974 1 ---+++- 0 60 0.7938 51493 661850 68548.53 0.0529979
+
+#PGC-ED
+mkdir -p ~/sumstats/Psych_ED && cd ~/sumstats/Psych_ED/
+wget -O pgc_an2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671980/versions/1"
+unzip pgc_an2019_summary_statistics.zip
+zcat pgcAN2.2019-07.vcf.tsv.gz | head -n 71 #First 70 lines are comments
+#CHROM   POS     ID      REF     ALT     BETA    SE      PVAL    NGT     IMPINFO NEFFDIV2        NCAS    NCON    DIRE
 
 #PGC-MDD
 mkdir -p ~/sumstats/Psych_MDD && cd ~/sumstats/Psych_MDD/
@@ -247,25 +268,6 @@ unzip pgc_mdd2025_summary_statistics.zip
 zcat ssf/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz | head -n 2
 #chromosome      base_pair_location      effect_allele   other_allele    beta    standard_error  effect_allele_frequency p_value   rsid    info    effect_allele_frequency_cases   n       ncases  ncontrols       heterogeneity_i2        heterogeneity_df  heterogeneity_p_value
 #1       753541  A       G       0.004101577021075048    0.0055  0.155   0.4614  rs2073813       0.847   0.15    829249.58310128   1035355 31.1    16      0.1082
-
-#PGC-ADHD
-mkdir -p ~/sumstats/Psych_ADHD && cd ~/sumstats/Psych_ADHD/
-wget -O pgc_adhd2022_summary_statistics.zip "https://figshare.com/ndownloader/articles/22564390/versions/1"
-unzip pgc_adhd2022_summary_statistics.zip
-zcat ADHD2022_iPSYCH_deCODE_PGC.meta.gz | head -n 2
-
-#PGC-ASD
-mkdir -p ~/sumstats/Psych_ASD && cd ~/sumstats/Psych_ASD/
-wget -O pgc_asd2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671989/versions/1"
-unzip pgc_asd2019_summary_statistics.zip
-zcat iPSYCH-PGC_ASD_Nov2017.gz | head -n 2
-
-#PGC-AN
-mkdir -p ~/sumstats/Psych_AN && cd ~/sumstats/Psych_AN/
-wget -O pgc_an2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671980/versions/1"
-unzip pgc_an2019_summary_statistics.zip
-zcat pgcAN2.2019-07.vcf.tsv.gz | head -n 71 #First 70 lines are comments
-#CHROM   POS     ID      REF     ALT     BETA    SE      PVAL    NGT     IMPINFO NEFFDIV2        NCAS    NCON    DIRE
 
 #PGC-OCD
 mkdir -p ~/sumstats/Psych_OCD && cd ~/sumstats/Psych_OCD/
@@ -281,6 +283,20 @@ wget -O pgc_ptsd2024_summary_statistics.zip "https://figshare.com/ndownloader/ar
 unzip pgc_ptsd2024_summary_statistics.zip
 zcat eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 67 #First 66 lines are comments
 # #CHROM  ID      POS     A1      A2      FREQ    NEFF    Z       P       DIRE
+
+#PGC-SCZ
+mkdir -p ~/sumstats/Psych_SCZ && cd ~/sumstats/Psych_SCZ/
+wget -O pgc_scz2022_sumstats.zip "https://figshare.com/ndownloader/articles/19426775/versions/7"
+unzip pgc_scz2022_sumstats.zip
+zcat PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz | head -n 75 #First 73 lines are comments
+# #CHROM  ID      POS     A1      A2      FREQ    NEFF    Z       P       DIRE
+#2       rs6759922       22450249        A       G       0.4573  638463.00       8.821   1.134e-18       +++-+--+-
+###cohortList="ipsych,bep1b,braz2,butr,celso,cgs1c,clz2a,cogs1,du2aa,enric,eu5me,eusp2,eutu2,gap1a,gawli,geba1,gpc2a,gro2a,grtr,lemu,mcqul,mosc2,paris,price,rive1,rouin,sb2aa,serri,to10c,uktr,viyo1,xaarh,xaber,xajsz,xasrb,xboco,xbuls,xcati,xcaws,xcims,xclm2,xclo3,xcou3,xdenm,xdubl,xedin,xegcu,xersw,xfi3m,xfii6,xgras,xirwt,xjr3a,xjr3b,xjri6,xjrsa,xlacw,xlie2,xlie5,xlktu,xmgs2,xmsaf,xmunc,xpewb,xpews,xpfla,xport,xs234,xswe1,xswe5,xswe6,xtop8,xucla,xuclo,xume2,xzhh1"
+#It doesn't seem to include ukbb
+
+#PGC-psychotic symptoms or functioning level
+mkdir -p ~/sumstats/Psych_SCZ_sx && cd ~/sumstats/Psych_SCZ_sx/
+wget -nH -r -np --cut-dirs=6 -e robots=off --reject="*index.html?*" https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90042001-GCST90043000/GCST90042791/harmonised/
 
 #PGC-SUD - Substance Use Disorder
 mkdir -p ~/sumstats/Psych_SUD && cd ~/sumstats/Psych_SUD/
