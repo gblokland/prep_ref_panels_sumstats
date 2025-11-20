@@ -228,15 +228,16 @@ mkdir -p ~/sumstats/Psych_ADHD/ADHDSexSpecific_Martin2018 && cd ~/sumstats/Psych
 ###unzip pgc_adhd2022_summary_statistics.zip
 ###zcat ADHD2022_iPSYCH_deCODE_PGC.meta.gz | head -n 2
 
-#PGC-ANX, Forstner2021 and Otawa2026
+#PGC-ANX, Forstner2021
 mkdir -p ~/sumstats/Psych_ANX/panic2019 && cd ~/sumstats/Psych_ANX/panic2019/
 wget --user-agent="Mozilla/5.0" -O pgc-panic2019.vcf.tsv.gz "https://figshare.com/ndownloader/files/30731276"
 ###zcat pgc-panic2019.vcf.tsv.gz | head -n 2
 
+#PGC-ANX, Otawa2016
 mkdir -p ~/sumstats/Psych_ANX/anx2016 && cd ~/sumstats/Psych_ANX/anx2016/
 wget --user-agent="Mozilla/5.0" -O pgc-anx2016_summary_statistics.zip "https://figshare.com/ndownloader/articles/14842689/versions/1"
 unzip pgc-anx2016_summary_statistics.zip
-###zcat pgc-panic2019.vcf.tsv.gz | head -n 2
+zcat anxiety.meta.full.cc.tbl.gz | head -n 2
 
 #PGC-ASD
 mkdir -p ~/sumstats/Psych_ASD/ASD3_Grove2019 && cd ~/sumstats/Psych_ASD/ASD3_Grove2019/
@@ -253,7 +254,12 @@ zcat bip2024_eur_noUKB_no23andMe.gz | head -n 2
 #rs10 7 92383888 A C 0.904 1.01207 0.0176 0.4974 1 ---+++- 0 60 0.7938 51493 661850 68548.53 0.0529979
 
 #PGC-ED
-mkdir -p ~/sumstats/Psych_ED && cd ~/sumstats/Psych_ED/
+mkdir -p ~/sumstats/Psych_ED/AN1_Duncan2017 && cd ~/sumstats/Psych_ED/AN1_Duncan2017/
+wget -O pgc_an2017_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671971/versions/1"
+unzip pgc_an2017_summary_statistics.zip
+zcat pgc.ed.freeze1.summarystatistics.July2017.txt.gz | head -n 2
+
+mkdir -p ~/sumstats/Psych_ED/AN2_Watson2019 && cd ~/sumstats/Psych_ED/AN2_Watson2019/
 wget -O pgc_an2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671980/versions/1"
 unzip pgc_an2019_summary_statistics.zip
 zcat pgcAN2.2019-07.vcf.tsv.gz | head -n 71 #First 70 lines are comments
@@ -270,12 +276,18 @@ zcat ssf/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz | head -n
 #1       753541  A       G       0.004101577021075048    0.0055  0.155   0.4614  rs2073813       0.847   0.15    829249.58310128   1035355 31.1    16      0.1082
 
 #PGC-OCD
-mkdir -p ~/sumstats/Psych_OCD && cd ~/sumstats/Psych_OCD/
+mkdir -p ~/sumstats/Psych_OCD/OCD1 && cd ~/sumstats/Psych_OCD/OCD1/
 wget -O pgc_ocd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672103/versions/1"
 unzip pgc_ocd2018_summary_statistics.zip
 zcat ocd_aug2017.gz | head -n 2
 #CHR     SNP     BP      A1      A2      INFO    OR      SE      P
 #1       rs141242758     734349  T       C       0.6683  1.07358 0.1088  0.5144
+
+#PGC-OCD
+mkdir -p ~/sumstats/Psych_OCD/OCD2_Strom2025 && cd ~/sumstats/Psych_OCD/OCD2_Strom2025/
+wget -O pgc_ocd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672103/versions/1"
+unzip pgc_ocd2018_summary_statistics.zip
+zcat ocd_aug2017.gz | head -n 2
 
 #PGC-PTSD
 mkdir -p ~/sumstats/Psych_PTSD && cd ~/sumstats/Psych_PTSD/
