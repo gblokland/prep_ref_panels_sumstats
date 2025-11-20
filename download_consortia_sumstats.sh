@@ -275,23 +275,35 @@ zcat ssf/pgc-mdd2025_no23andMe-noUKBB_eur_v3-49-24-11_formatted.tsv.gz | head -n
 #chromosome      base_pair_location      effect_allele   other_allele    beta    standard_error  effect_allele_frequency p_value   rsid    info    effect_allele_frequency_cases   n       ncases  ncontrols       heterogeneity_i2        heterogeneity_df  heterogeneity_p_value
 #1       753541  A       G       0.004101577021075048    0.0055  0.155   0.4614  rs2073813       0.847   0.15    829249.58310128   1035355 31.1    16      0.1082
 
-#PGC-OCD
-mkdir -p ~/sumstats/Psych_OCD/OCD1 && cd ~/sumstats/Psych_OCD/OCD1/
+#PGC-OCD-TS
+mkdir -p ~/sumstats/Psych_OCD-TS/OCD1 && cd ~/sumstats/Psych_OCD-TS/OCD1/
 wget -O pgc_ocd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672103/versions/1"
 unzip pgc_ocd2018_summary_statistics.zip
 zcat ocd_aug2017.gz | head -n 2
 #CHR     SNP     BP      A1      A2      INFO    OR      SE      P
 #1       rs141242758     734349  T       C       0.6683  1.07358 0.1088  0.5144
 
-#PGC-OCD
-mkdir -p ~/sumstats/Psych_OCD/OCD2_Strom2025 && cd ~/sumstats/Psych_OCD/OCD2_Strom2025/
-wget -O pgc_ocd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672103/versions/1"
-unzip pgc_ocd2018_summary_statistics.zip
+#PGC-OCD-TS
+mkdir -p ~/sumstats/Psych_OCD-TS/OCD2_Strom2025 && cd ~/sumstats/Psych_OCD-TS/OCD2_Strom2025/
+wget -O pgc_ocd2025_summary_statistics.zip "https://figshare.com/ndownloader/articles/28707155/versions/4"
+unzip pgc_ocd2025_summary_statistics.zip
 zcat ocd_aug2017.gz | head -n 2
 
-#PGC-PTSD
-mkdir -p ~/sumstats/Psych_PTSD && cd ~/sumstats/Psych_PTSD/
-wget -O pgc_ptsd2024_summary_statistics.zip "https://figshare.com/ndownloader/articles/26349322/versions/3"
+#PGC-PTSD, Duncan2018
+mkdir -p ~/sumstats/Psych_PTSD/PTSD1_Duncan2018 && cd ~/sumstats/Psych_PTSD/PTSD1_Duncan2018/
+wget --user-agent="Mozilla/5.0" -O pgc_ptsd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672106/versions/1"
+unzip pgc_ptsd2018_summary_statistics.zip
+zcat eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 2
+
+#PGC-PTSD, Nievergelt2019
+mkdir -p ~/sumstats/Psych_PTSD/PTSD2_Nievergelt2019 && cd ~/sumstats/Psych_PTSD/PTSD2_Nievergelt2019/
+wget --user-agent="Mozilla/5.0" -O pgc_ptsd2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672133/versions/1"
+unzip pgc_ptsd2019_summary_statistics.zip
+zcat eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 2
+
+#PGC-PTSD, Nievergelt2024
+mkdir -p ~/sumstats/Psych_PTSD/PTSD3_Nievergelt2024 && cd ~/sumstats/Psych_PTSD/PTSD3_Nievergelt2024/
+wget --user-agent="Mozilla/5.0" -O pgc_ptsd2024_summary_statistics.zip "https://figshare.com/ndownloader/articles/26349322/versions/3"
 unzip pgc_ptsd2024_summary_statistics.zip
 zcat eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 67 #First 66 lines are comments
 # #CHROM  ID      POS     A1      A2      FREQ    NEFF    Z       P       DIRE
