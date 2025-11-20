@@ -241,11 +241,23 @@ zcat anxiety.meta.full.cc.tbl.gz | head -n 2
 
 #PGC-ASD
 mkdir -p ~/sumstats/Psych_ASD/ASD3_Grove2019 && cd ~/sumstats/Psych_ASD/ASD3_Grove2019/
-wget -O pgc_asd2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671989/versions/1"
+wget -O pgc_asd2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14671998/versions/1"
 unzip pgc_asd2019_summary_statistics.zip
 zcat iPSYCH-PGC_ASD_Nov2017.gz | head -n 2
 
-#PGC-BIP
+#PGC-BIP, Stahl2019
+mkdir -p ~/sumstats/Psych_BIP/BIP2_Stahl2019 && cd ~/sumstats/Psych_BIP/BIP2_Stahl2019/
+wget -O pgc_bip2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14102594/versions/2"
+unzip pgc_bip2019_summary_statistics.zip
+#zcat bip2019_eur_noUKB_no23andMe.gz | head -n 2
+
+#PGC-BIP, Mullins2021
+mkdir -p ~/sumstats/Psych_BIP/BIP3_Mullins2021 && cd ~/sumstats/Psych_BIP/BIP3_Mullins2021/
+wget -O pgc_bip2021_summary_statistics.zip "https://figshare.com/ndownloader/articles/14102594/versions/2"
+unzip pgc_bip2021_summary_statistics.zip
+#zcat bip2021_eur_noUKB_no23andMe.gz | head -n 2
+
+#PGC-BIP, OConnell2024
 mkdir -p ~/sumstats/Psych_BIP/BIP4_OConnell2024 && cd ~/sumstats/Psych_BIP/BIP4_OConnell2024/
 wget -O pgc_bip2024_summary_statistics.zip "https://figshare.com/ndownloader/articles/27216117/versions/2"
 unzip pgc_bip2024_summary_statistics.zip
@@ -269,6 +281,9 @@ zcat pgcAN2.2019-07.vcf.tsv.gz | head -n 71 #First 70 lines are comments
 mkdir -p ~/sumstats/Psych_MDD/MDD2_Wray2018 && cd ~/sumstats/Psych_MDD/MDD2_Wray2018/
 wget --user-agent="Mozilla/5.0" -O pgc_mdd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672085/versions/2"
 unzip pgc_mdd2018_summary_statistics.zip
+
+wget --user-agent="Mozilla/5.0" -O daner_pgc_mdd_meta_w2_no23andMe_rmUKBB.gz "https://figshare.com/ndownloader/files/39504667"
+zcat pgcAN2.2019-07.vcf.tsv.gz | head -n 71 #First 70 lines are comments
 
 #PGC-MDD, Howard2019
 mkdir -p ~/sumstats/Psych_MDD/MDD3_Howard2019 && cd ~/sumstats/Psych_MDD/MDD3_Howard2019/
