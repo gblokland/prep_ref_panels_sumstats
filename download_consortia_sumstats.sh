@@ -440,7 +440,7 @@ zless AUDIT_UKB_2018_AJP.txt.gz | head -n 2
 ###chr rsid a_0 a_1 info beta_T se_T p_T beta_C se_C p_C beta_P se_P p_P N
 ###1 1:10000179_AAAAAAAC_A AAAAAAAC A 0.985768 -0.0023263 0.0087656 0.790715040934701 0.0024046 0.0080078 0.763958909282397 -0.013933 0.0076296 0.0678265926015363 121568
 
-#PGC-SUD-Any - Substance Use Disorder
+#PGC-SUD-Any - Substance Use Disorder, Hatoum2023
 mkdir -p ~/sumstats/Psych_SUD/PGC-sud2023-sud-Hatoum2023-sumstats && cd ~/sumstats/Psych_SUD/PGC-sud2023-sud-Hatoum2023-sumstats/
 wget --user-agent="Mozilla/5.0" -O pgc_sud2023_summary_statistics.zip "https://figshare.com/ndownloader/articles/24268882/versions/1"
 unzip pgc_sud2023_summary_statistics.zip
@@ -448,7 +448,7 @@ zless Hatoum2023AddictionEuropean.txt.gz | head -n 2
 ###SNP     Chr     BP      A1      A2      Beta    P
 ###rs1000000       12      126890980       G       A       0.000999726671814611    0.701658206953194
 
-#PGC-SUD-CUD - Cannabis Use Disorder
+#PGC-SUD-CUD - Cannabis Use Disorder, Johnson2020
 mkdir -p ~/sumstats/Psych_SUD/PGC-sud2020-cud-Johnson2020-sumstats && cd ~/sumstats/Psych_SUD/PGC-sud2020-cud-Johnson2020-sumstats/
 wget --user-agent="Mozilla/5.0" -O pgc_cud2020_summary_statistics.zip "https://figshare.com/ndownloader/articles/14842692/versions/1"
 unzip pgc_cud2020_summary_statistics.zip
