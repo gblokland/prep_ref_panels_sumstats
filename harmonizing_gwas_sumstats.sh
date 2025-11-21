@@ -78,20 +78,33 @@ python ~/opt/python_convert/sumstats.py csv \
 ##########
 
 cd ~/sumstats/Psych_ADHD/
+###CHR	SNP	BP	A1	A2	FRQ_A_19099	FRQ_U_34194	INFO	OR	SE	P	ngt	Direction	HetISqt	HetDf	HetPVa	Nca	Nco	Neff
+###8	rs62513865	101592213	T	C	0.077	0.0731	0.955	1.05940	0.026	0.02651	0	-+++0-++-+-++-+++-+++++--++-+--+-	11.2	32	0.2846	19099	34194	22842.43
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ADHD2_Demontis2019/27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--sumstats ADHD2_Demontis2019/daner_adhd_meta_filtered_NA_iPSYCH23_PGC11_sigPCs_woSEX_2ell6sd_EUR_Neff_70.meta.gz \
 --out Psych_ADHD2_Demontis2019_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
 --beta beta --se standard_error --pval p_value --n-val 173480
+###CHR SNP BP A1 A2 FRQ_A_38691 FRQ_U_186843 INFO OR SE P Direction Nca Nco
+###8 rs62513865 101592213 C T 0.925 0.937 0.981 0.99631 0.0175 0.8325 +---+++0-++-+ 38691 186843
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ADHD3_Demontis2022/27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
+--sumstats ADHD3_Demontis2022/ADHD2022_iPSYCH_deCODE_PGC.meta.gz \
 --out Psych_ADHD3_Demontis2022_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
 --beta beta --se standard_error --pval p_value --n-val 173480
+###SNP CHR BP A1 A2 Effect SE P
+###rs2326918 6 130840091 A G -0.0103 0.0245 0.6731
 python ~/opt/python_convert/sumstats.py csv \
---sumstats ADHDSexSpecific_Martin2018/27863252-GCST004614-EFO_0007987-Build37.f.tsv.gz \
---out Psych_ADHDSexSpecific_Martin2018_sumstats.tsv \
---force --auto --head 5 --chr chromosome --bp base_pair_location --snp variant_id \
+--sumstats ADHDSexSpecific_Martin2018/META_PGC_iPSYCH_males.gz \
+--out Psych_ADHDSexSpecific_Martin2018_sumstats_males.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
+--beta beta --se standard_error --pval p_value --n-val 173480
+###SNP CHR BP A1 A2 Effect SE P
+###rs2326918 6 130840091 A G -0.0103 0.0245 0.6731
+python ~/opt/python_convert/sumstats.py csv \
+--sumstats ADHDSexSpecific_Martin2018/META_PGC_iPSYCH_females.gz \
+--out Psych_ADHDSexSpecific_Martin2018_sumstats_females.tsv \
+--force --auto --head 5 --chr CHR --bp BP --snp SNP \
 --beta beta --se standard_error --pval p_value --n-val 173480
 
 cd ~/sumstats/Psych_ASD/
