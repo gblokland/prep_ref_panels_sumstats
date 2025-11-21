@@ -10,21 +10,21 @@ mkdir -p ~/sumstats/Brain_Structure && cd ~/sumstats/Brain_Structure/
 #These are the principal results (all European cohorts).
 #Each file is ~200 MB in size and the results are split into folders.
 #This folder has total SA and average TH with genomic control applied
-wget -nH -r -np --cut-dirs=1 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_Global/
+wget -nH -r -np --cut-dirs=2 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_Global/
 #This folder has total SA and average TH without genomic control applied
-wget -nH -r -np --cut-dirs=1 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_Global_noGC/
+wget -nH -r -np --cut-dirs=2 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_Global_noGC/
 #This folder has regional SA and TH that are adjusted for the respective global measures and with genomic control applied.
-wget -nH -r -np --cut-dirs=1 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal/
+wget -nH -r -np --cut-dirs=2 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal/
 #reject files already downloaded based on pattern:
-#wget -nH -r -np --cut-dirs=1 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal/ -R *wSA*
+#wget -nH -r -np --cut-dirs=2 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal/ -R *wSA*
 #This folder has regional SA and TH that are adjusted for the respective global measures and without genomic control applied.
-wget -nH -r -np --cut-dirs=1 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal_noGC/
-#wget -nH -r -np --cut-dirs=1 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal_noGC/ -R *wTHICK* -A ENIGMA3_mixed_se_wSA_Mean_lateraloccipital_surfavg_20190429_noGC.txt.gz
+wget -nH -r -np --cut-dirs=2 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal_noGC/
+#wget -nH -r -np --cut-dirs=2 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal_noGC/ -R *wTHICK* -A ENIGMA3_mixed_se_wSA_Mean_lateraloccipital_surfavg_20190429_noGC.txt.gz
 #wget -nH https://enigma.ini.usc.edu/downloads/ENIGMA3_withGlobal_noGC/ENIGMA3_mixed_se_wSA_Mean_lateralorbitofrontal_surfavg_20200522_noGC.txt.gz
 #This folder has regional SA and TH that are NOT adjusted for the respective global measures and with genomic control applied.
-wget -nH -r -np --cut-dirs=1 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withoutGlobal/
+wget -nH -r -np --cut-dirs=2 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withoutGlobal/
 #This folder has regional SA and TH that are NOT adjusted for the respective global measures and without genomic control applied.
-wget -nH -r -np --cut-dirs=1 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withoutGlobal_noGC/
+wget -nH -r -np --cut-dirs=2 -e robots=off --reject="*index.html?*" https://enigma.ini.usc.edu/downloads/ENIGMA3_withoutGlobal_noGC/
 rm */*index.html?*
 zcat ENIGMA3_mixed_se_wo_Mean_Full_SurfArea_20190429_noGC.txt.gz | head -n 2
 #SNP A1 A2 FREQ1 BETA SE P N MARKER CHR BP
@@ -35,25 +35,25 @@ zcat ENIGMA3_mixed_se_wSA_Mean_bankssts_surfavg_20190429.txt.gz | head -n 2
 
 #Complete ENIGMA2 Subcortical Volumes Summary Statistics Access Request Form 
 mkdir -p ~/sumstats/Brain_Structure/ENIGMA2_subcortical && cd ~/sumstats/Brain_Structure/ENIGMA2_subcortical/
-wget -nH http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_ICV_Combined_GenomeControlled_Jan23.tbl.gz
-wget -nH http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanAccumbens_Combined_GenomeControlled_Jan23.tbl.gz
-wget -nH http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanAmygdala_Combined_GenomeControlled_Jan23.tbl.gz
-wget -nH http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanCaudate_Combined_GenomeControlled_Jan23.tbl.gz
-wget -nH http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz
-wget -nH http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanPallidum_Combined_GenomeControlled_Jan23.tbl.gz
-wget -nH http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanPutamen_Combined_GenomeControlled_Jan23.tbl.gz
-wget -nH http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanThalamus_Combined_GenomeControlled_Jan23.tbl.gz
+wget -nH -r -np --cut-dirs=4 -e robots=off --reject="*index.html?*" http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_ICV_Combined_GenomeControlled_Jan23.tbl.gz
+wget -nH -r -np --cut-dirs=4 -e robots=off --reject="*index.html?*" http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanAccumbens_Combined_GenomeControlled_Jan23.tbl.gz
+wget -nH -r -np --cut-dirs=4 -e robots=off --reject="*index.html?*" http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanAmygdala_Combined_GenomeControlled_Jan23.tbl.gz
+wget -nH -r -np --cut-dirs=4 -e robots=off --reject="*index.html?*" http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanCaudate_Combined_GenomeControlled_Jan23.tbl.gz
+wget -nH -r -np --cut-dirs=4 -e robots=off --reject="*index.html?*" http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanHippocampus_Combined_GenomeControlled_Jan23.tbl.gz
+wget -nH -r -np --cut-dirs=4 -e robots=off --reject="*index.html?*" http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanPallidum_Combined_GenomeControlled_Jan23.tbl.gz
+wget -nH -r -np --cut-dirs=4 -e robots=off --reject="*index.html?*" http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanPutamen_Combined_GenomeControlled_Jan23.tbl.gz
+wget -nH -r -np --cut-dirs=4 -e robots=off --reject="*index.html?*" http://enigma.ini.usc.edu/wp-content/uploads/E2_EVIS/ENIGMA2_MeanThalamus_Combined_GenomeControlled_Jan23.tbl.gz
 zcat ENIGMA2_ICV_Combined_GenomeControlled_Jan23.tbl.gz| head -n 2
 #RSID CHR_BP_hg19b37 Effect_Allele Non_Effect_Allele Freq_European_1000Genomes Effect_Beta StdErr Pvalue N
 #rs667647 5:29439275 T C 0.347 -148.8340 2029.8618 0.9415 11373
 
-#Cerebellum and global volume
+#UKB: Cerebellum and global volume
 wget https://ctg.thebluebus.nl/documents/p1651/Tissinketal_CommBio2022_readme.txt
 wget https://ctg.thebluebus.nl/documents/p1651/Tissinketal_CommBio2022_cerebellarvolume.txt.gz
 wget https://ctg.thebluebus.nl/documents/p1651/Tissinketal_CommBio2022_cerebralvolume.txt.gz
 wget https://ctg.thebluebus.nl/documents/p1651/Tissinketal_CommBio2022_subcorticalvolume.txt.gz
 
-#Functional and Structural connectivity
+#UKB: Functional and Structural connectivity
 mkdir -p ~/sumstats/Brain_Function && cd ~/sumstats/Brain_Function/
 wget https://ctg.thebluebus.nl/documents/p1651/Tissinketal_eNeuro2023_FC_Default_EUR_sumstats.txt.gz
 wget https://ctg.thebluebus.nl/documents/p1651/Tissinketal_eNeuro2023_FC_Dorsal.Attention_EUR_sumstats.txt.gz
@@ -379,18 +379,13 @@ mkdir -p ~/sumstats/Psych_PTSD/PTSD1_Duncan2018 && cd ~/sumstats/Psych_PTSD/PTSD
 wget --user-agent="Mozilla/5.0" -O pgc_ptsd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672106/versions/1"
 unzip pgc_ptsd2018_summary_statistics.zip
 unzip AA.zip
+gzip SORTED_PTSD_AA7_ALL_study_specific_PCs1.txt
 unzip All.zip
+gzip SORTED_PTSD_EA9_AA7_LA1_SA2_ALL_study_specific_PCs1.txt
 unzip EA.zip
-zless SORTED_PTSD_AA7_ALL_study_specific_PCs1.txt | head -n 2
-
-#PGC-PTSD-SexStratified, Duncan2018
-mkdir -p ~/sumstats/Psych_PTSD/PTSD1SexStratified_Duncan2018 && cd ~/sumstats/Psych_PTSD/PTSD1SexStratified_Duncan2018/
-wget --user-agent="Mozilla/5.0" -O pgc_ptsd2018_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672106/versions/1"
-unzip pgc_ptsd2018_summary_statistics.zip
-unzip AA.zip
-unzip All.zip
-unzip EA.zip
-zless PTSD_Female_European_ancestry.gz | head -n 2
+gzip SORTED_PTSD_EA9_ALL_study_specific_PCs1.txt
+zless SORTED_PTSD_AA7_ALL_study_specific_PCs1.txt.gz | head -n 2
+rm AA.zip All.zip EA.zip
 
 #PGC-PTSD, Nievergelt2019
 mkdir -p ~/sumstats/Psych_PTSD/PTSD2_Nievergelt2019 && cd ~/sumstats/Psych_PTSD/PTSD2_Nievergelt2019/
@@ -399,6 +394,12 @@ unzip pgc_ptsd2019_summary_statistics.zip
 zless pts_eur_freeze2_overall.results.gz | head -n 2
 ###CHR	SNP	BP	A1	A2	FRQ_A_23212	FRQ_U_151447	INFO	OR	SE	P	ngt	Direction	HetISqt	HetDf	HetPVa	Nca	Nco	Neff
 ###6	rs34517852	157789333	A	T	0.3560	0.3342	0.869874	1.11572	0.0185	3.164e-09	0	++--++?+++++--+++++++-?-++++--++++++?--+++-	14.2	39	0.2206	12080	33446	30273.8
+
+#PGC-PTSD-SexStratified, Nievergelt2019
+mkdir -p ~/sumstats/Psych_PTSD/PTSD2SexStratified_Nievergelt2019 && cd ~/sumstats/Psych_PTSD/PTSD2SexStratified_Nievergelt2019/
+###wget --user-agent="Mozilla/5.0" -O pgc_ptsd2019_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672133/versions/1"
+###unzip pgc_ptsd2019_summary_statistics.zip
+zless PTSD_Female_European_ancestry.gz | head -n 2
 
 #PGC-PTSD, Nievergelt2024
 mkdir -p ~/sumstats/Psych_PTSD/PTSD3_Nievergelt2024 && cd ~/sumstats/Psych_PTSD/PTSD3_Nievergelt2024/
@@ -410,7 +411,7 @@ zless eur_ptsd_pcs_v4_aug3_2021.vcf.gz | head -n 68 #First 66 lines are comments
 
 #PGC-SCZ
 mkdir -p ~/sumstats/Psych_SCZ && cd ~/sumstats/Psych_SCZ/
-wget -O pgc_scz2022_sumstats.zip "https://figshare.com/ndownloader/articles/19426775/versions/7"
+wget --user-agent="Mozilla/5.0" -O pgc_scz2022_sumstats.zip "https://figshare.com/ndownloader/articles/19426775/versions/7"
 unzip pgc_scz2022_sumstats.zip
 zless PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz | head -n 75 #First 73 lines are comments
 # #CHROM  ID      POS     A1      A2      FREQ    NEFF    Z       P       DIRE
@@ -422,23 +423,43 @@ zless PGC3_SCZ_wave3.european.autosome.public.v3.vcf.tsv.gz | head -n 75 #First 
 mkdir -p ~/sumstats/Psych_SCZ_sx && cd ~/sumstats/Psych_SCZ_sx/
 wget -nH -r -np --cut-dirs=6 -e robots=off --reject="*index.html?*" https://ftp.ebi.ac.uk/pub/databases/gwas/summary_statistics/GCST90042001-GCST90043000/GCST90042791/harmonised/
 
-#PGC-SUD - Substance Use Disorder
-mkdir -p ~/sumstats/Psych_SUD && cd ~/sumstats/Psych_SUD/
-wget -O pgc_sud2023_summary_statistics.zip "https://figshare.com/ndownloader/articles/24268882/versions/1"
+#PGC-SUD-ALC - Alcohol Dependence, Walters2018
+mkdir -p ~/sumstats/Psych_SUD/PGC-sud2018-alc-Walters2018-sumstats && cd ~/sumstats/Psych_SUD/PGC-sud2018-alc-Walters2018-sumstats/
+wget --user-agent="Mozilla/5.0" -O pgc_sud2018-alc_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672187/versions/1"
+unzip pgc_sud2018-alc_summary_statistics.zip
+tar xzf pgc_alcdep.aug2018_release.tar.gz
+zless pgc_alcdep.eur_discovery.aug2018_release.txt.gz | head -n 2
+###CHR SNP BP A1 A2 Z P Weight
+###1 rs10799799:23973601:G:T 23973601 T G -0.012 0.9904 24810.32
+
+#PGC-SUD-ALC - Alcohol Use, SanchezRoige2019
+mkdir -p ~/sumstats/Psych_SUD/PGC-sud2019-alcuse-SanchezRoige2019-sumstats && cd ~/sumstats/Psych_SUD/PGC-sud2019-alcuse-SanchezRoige2019-sumstats/
+wget --user-agent="Mozilla/5.0" -O pgc_sud2019-alcuse_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672193/versions/1"
+unzip pgc_sud2019-alcuse_summary_statistics.zip
+zless AUDIT_UKB_2018_AJP.txt.gz | head -n 2
+###chr rsid a_0 a_1 info beta_T se_T p_T beta_C se_C p_C beta_P se_P p_P N
+###1 1:10000179_AAAAAAAC_A AAAAAAAC A 0.985768 -0.0023263 0.0087656 0.790715040934701 0.0024046 0.0080078 0.763958909282397 -0.013933 0.0076296 0.0678265926015363 121568
+
+#PGC-SUD-Any - Substance Use Disorder
+mkdir -p ~/sumstats/Psych_SUD/PGC-sud2023-sud-Hatoum2023-sumstats && cd ~/sumstats/Psych_SUD/PGC-sud2023-sud-Hatoum2023-sumstats/
+wget --user-agent="Mozilla/5.0" -O pgc_sud2023_summary_statistics.zip "https://figshare.com/ndownloader/articles/24268882/versions/1"
 unzip pgc_sud2023_summary_statistics.zip
 zless Hatoum2023AddictionEuropean.txt.gz | head -n 2
 ###SNP     Chr     BP      A1      A2      Beta    P
 ###rs1000000       12      126890980       G       A       0.000999726671814611    0.701658206953194
 
-#PGC-CUD - Cannabis Use Disorder
-mkdir -p ~/sumstats/Psych_CUD && cd ~/sumstats/Psych_CUD/
-wget -O pgc_cud2020_summary_statistics.zip "https://figshare.com/ndownloader/articles/14842692/versions/1"
+#PGC-SUD-CUD - Cannabis Use Disorder
+mkdir -p ~/sumstats/Psych_SUD/PGC-sud2020-cud-Johnson2020-sumstats && cd ~/sumstats/Psych_SUD/PGC-sud2020-cud-Johnson2020-sumstats/
+wget --user-agent="Mozilla/5.0" -O pgc_cud2020_summary_statistics.zip "https://figshare.com/ndownloader/articles/14842692/versions/1"
 unzip pgc_cud2020_summary_statistics.zip
-zless Hatoum2023AddictionEuropean.txt.gz | head -n 2
+zless CUD_EUR_casecontrol_public_11.14.2020.gz | head -n 2
+###CHR SNP BP A1 A2 Beta SE P N N_CAS N_CON
+###1 rs12562373 166367755 A G -0.0384 0.0198 0.05273 353997 12947 341020
 
-#PGC-OD - Opioid Dependence, Polimanti et al 2020
-mkdir -p ~/sumstats/Psych_OD && cd ~/sumstats/Psych_OD/
-wget -O pgc_od2020_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672211/versions/1"
+#PGC-SUD-OD - Opioid Dependence, Polimanti et al 2020
+mkdir -p ~/sumstats/Psych_SUD/PGC-sud2020-op-Polimanti2020-sumstats && cd ~/sumstats/Psych_SUD/PGC-sud2020-op-Polimanti2020-sumstats/
+wget --user-agent="Mozilla/5.0" -O pgc_od2020_summary_statistics.zip "https://figshare.com/ndownloader/articles/14672211/versions/1"
 unzip pgc_od2020_summary_statistics.zip
 zless OD_cases_vs._opioid-exposed_controls_in_European-ancestry_cohorts.gz | head -n 2
-
+###opi.DEPvEXP_EUR.noAF.tbl0000644002722100251630222740207013755231535014552 0ustar  rp482polimantirsID	Allele1	Allele2	Weight	Zscore	P-value	HetISq	HetChiSq	HetDf	HetPVal	Total_N	Total_NCase	Total_NControl	ngt
+###rs10868284	a	c	3340.40	-1.609	0.1075	0.0	3.923	7	0.7886	5709	3174	2535	0
