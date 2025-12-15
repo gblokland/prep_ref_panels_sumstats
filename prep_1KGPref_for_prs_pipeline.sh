@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##################################################################################################
-mkdir -p /notebooks/ref_panels/1KGPref
+mkdir -p ~/ref_panels/1KGPref
 cd ~/ref_panels/1KGPref
 #wget -r -np -R "index.html*, supporting" -e robots=off --cut-dirs=5 ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/
 #cd ftp.1000genomes.ebi.ac.uk/
