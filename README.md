@@ -16,6 +16,14 @@ Step 2
 
 Download GWAS summary statistics into ~/sumstats, using the 3 download_*.sh scripts.
 
+```
+./download_consortia_sumstats.sh
+./download_FinnGen_sumstats.sh
+./download_sumstats_from_ftp_epi.sh
+./download_sumstats_from_gwas_catalog_ftp.sh
+
+```
+
 Step 3
 
 Edit script call_clean_gwas_sumstats.sh
