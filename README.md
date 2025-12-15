@@ -28,7 +28,7 @@ Step 2
 
 Step 3
 
-Download GWAS summary statistics into ~/sumstats, using the 3 download_*.sh scripts.
+Download GWAS summary statistics into ~/sumstats, using the appropriate download_*.sh script. You can add your own as well.
 
 ```
 ./download_consortia_sumstats.sh
