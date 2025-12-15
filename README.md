@@ -23,5 +23,5 @@ Edit script call_clean_gwas_sumstats.sh
 Step 4
 
 ```
-./call_clean_gwas_sumstats.sh #This script calls clean_gwas_sumstats.py
+./call_clean_gwas_sumstats.sh #This wrapper script calls the functions in clean_gwas_sumstats.py
 ```
