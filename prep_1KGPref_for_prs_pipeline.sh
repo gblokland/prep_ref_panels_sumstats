@@ -57,10 +57,16 @@ python ~/code/prs_pipeline/merge_and_sort_files.py ~/ref_panels/1KGPref/merged_w
 
 cd ~/ref_panels/
 mkdir -p ucsc_hg19 && cd ucsc_hg19
-wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/snp151Common.txt.gz
-gunzip snp151Common.txt.gz
+if [ ! -f ~/ref_panels/ucsc_hg19/snp151Common.txt.gz ] && [ ! -f ~/ref_panels/ucsc_hg19/snp151Common.txt ]; then
+    wget http://hgdownload.cse.ucsc.edu/goldenpath/hg19/database/snp151Common.txt.gz
+fi
+if [ ! -f ~/ref_panels/ucsc_hg19/snp151Common.txt ]; then
+    gunzip snp151Common.txt.gz
+fi
+if [ ! -f ~/ref_panels/ucsc_hg19/rsid_chr_bp_map.tsv ]; then
 ###cut -f2-5 snp151Common.txt | awk '{gsub("chr", "", $2); print $4"\t$1"\t"$2"\t"($3+1)}' > rsid_chr_bp_map.tsv
 cut -f2-5 snp151Common.txt | awk 'BEGIN {print "SNP\tCHR\tBP\tBP_END"} {gsub("chr", "", $1); print $4"\t"$1"\t"$2"\t"$3}' > rsid_chr_bp_map.tsv
+fi
 
 ##################################################################################################
 #Run format conversion
