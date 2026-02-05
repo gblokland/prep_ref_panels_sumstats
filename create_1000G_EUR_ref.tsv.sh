@@ -1,8 +1,10 @@
 #!/bin/bash
 
-cd ~/persistent/ref_panels/
+mkdir -p ~/ref_panels/1KGPref
+cd ~/ref_panels/1KGPref
 
 # Download 1000 Genomes Phase 3 PLINK files (b37/hg19)
+if [ ! -f ~/ref_panels/1KGPref/integrated_call_samples_v3.20130502.ALL.panel ]; then
 for chr in {1..22}; do
   wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chr${chr}.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz
   wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chr${chr}.phase3_shapeit2_mvncall_integrated_v5b.20130502.genotypes.vcf.gz.tbi
@@ -12,6 +14,7 @@ wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chrX.phase3
 wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chrX.phase3_shapeit2_mvncall_integrated_v1c.20130502.genotypes.vcf.gz.tbi   
 wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chrY.phase3_integrated_v2b.20130502.genotypes.vcf.gz   
 wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20130502/ALL.chrY.phase3_integrated_v2b.20130502.genotypes.vcf.gz.tbi
+fi
 
 # Create list of European samples (optional)
 wget https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/working/20130606_sample_info/20130606_sample_info.txt
