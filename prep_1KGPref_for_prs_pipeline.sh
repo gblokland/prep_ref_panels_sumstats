@@ -46,13 +46,13 @@ cd ~/ref_panels/1KGPref/
 --keep ~/ref_panels/1KGPref/AMR_samples.txt --out ~/ref_panels/1KGPref/AMR_frequencies
 
 cat ~/ref_panels/1KGPref/EUR_frequencies.frq | sed 's/{ALLELE:FREQ}/{ALLELE:FREQ}.1\t{ALLELE:FREQ}.2/g' > ~/ref_panels/1KGPref/EUR_frequencies.frq.edit
-python ~/code/prs_pipeline/split_allele_freq.py ~/ref_panels/1KGPref/EUR_frequencies.frq.edit ~/ref_panels/1KGPref/EUR_frequencies.frq.tsv
+python ./backend/split_allele_freq.py ~/ref_panels/1KGPref/EUR_frequencies.frq.edit ~/ref_panels/1KGPref/EUR_frequencies.frq.tsv
 
 #Extract SNP rs ids and CHROM and POS from vcf file and write to tsv file
-python ~/code/prs_pipeline/extract_vcf_info.py ~/ref_panels/1KGPref/merged_whole_genome.vcf.gz ~/ref_panels/1KGPref/merged_whole_genome_snps.tsv
+python ./backend/extract_vcf_info.py ~/ref_panels/1KGPref/merged_whole_genome.vcf.gz ~/ref_panels/1KGPref/merged_whole_genome_snps.tsv
 
 #Merge SNP info with frq file
-python ~/code/prs_pipeline/merge_and_sort_files.py ~/ref_panels/1KGPref/merged_whole_genome_snps.tsv ~/ref_panels/1KGPref/EUR_frequencies.frq.tsv \
+python ./backend/merge_and_sort_files.py ~/ref_panels/1KGPref/merged_whole_genome_snps.tsv ~/ref_panels/1KGPref/EUR_frequencies.frq.tsv \
 ~/ref_panels/1KGPref/EUR_frequencies.tsv
 
 cd ~/ref_panels/
