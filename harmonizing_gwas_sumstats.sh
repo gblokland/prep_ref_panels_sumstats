@@ -24,19 +24,21 @@ pip install -r python_requirements_shortlist.txt
 #https://academic.oup.com/bioinformatics/article/28/3/444/189687
 #https://github.com/precimed/python_convert
 cd ~/opt/
-git clone https://github.com/precimed/python_convert.git
+if [ ! -d python_convert ]; then
+	git clone https://github.com/precimed/python_convert.git
+fi
 cd python_convert/
 chmod +x *.py
-wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/2558411_ref.bim
-wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/9279485_ref.bim
-wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_RsMergeArch.bcp.gz
-wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_SNPChrPosOnRef_105.bcp.gz
-wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_SNPHistory.bcp.gz
-wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/hg18ToHg19.over.chain.gz
-wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/ref_1kG_phase3_EUR.tar.gz
-tar xzf ref_1kG_phase3_EUR.tar.gz
-
-
+if [ ! -f 2558411_ref.bim ]; then
+	wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/2558411_ref.bim
+	wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/9279485_ref.bim
+	wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_RsMergeArch.bcp.gz
+	wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_SNPChrPosOnRef_105.bcp.gz
+	wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/b149_SNPHistory.bcp.gz
+	wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/hg18ToHg19.over.chain.gz
+	wget https://precimed.s3-eu-west-1.amazonaws.com/python_convert/ref_1kG_phase3_EUR.tar.gz
+	tar xzf ref_1kG_phase3_EUR.tar.gz
+fi
 
 ##################################################################################################
 # Run harmonization
