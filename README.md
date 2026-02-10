@@ -34,7 +34,6 @@ Download GWAS summary statistics into ~/sumstats, using the appropriate download
 ./download_consortia_sumstats.sh
 ./download_FinnGen_sumstats.sh
 ./download_sumstats_from_ftp_epi.sh
-./download_sumstats_from_gwas_catalog_ftp.sh
 
 ```
 
