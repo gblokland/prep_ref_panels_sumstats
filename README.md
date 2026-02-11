@@ -17,16 +17,12 @@ Step 1
 Prepare the reference files needed by the PRS pipeline.
 
 ```
-./prep_1KGPref_for_prs_pipeline.sh
+./00_prep_1KGPref_for_prs_pipeline.sh
+./00_create_1000G_EUR_ref.tsv.sh
+./00_make_variant_map.sh
 ```
 
 Step 2
-
-```
-./create_1000G_EUR_ref.tsv.sh
-```
-
-Step 3
 
 Download GWAS summary statistics into ~/sumstats, using the appropriate download_*.sh script. You can add your own as well.
 
@@ -37,11 +33,11 @@ Download GWAS summary statistics into ~/sumstats, using the appropriate download
 
 ```
 
-Step 4
+Step 3
 
 Edit script call_clean_gwas_sumstats.sh
 
-Step 5
+Step 4
 
 ```
 ./call_clean_gwas_sumstats.sh #This wrapper script calls the functions in clean_gwas_sumstats.py
