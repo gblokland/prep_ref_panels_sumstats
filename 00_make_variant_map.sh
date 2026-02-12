@@ -1,10 +1,12 @@
 #!/bin/bash
 # Make variant map for assigning rsIDs in place of positional IDs
-cd /root/persistent/ref_panels
-mkdir -p hg19_GRCh37
+mkdir -p /root/persistent/ref_panels/hg19_GRCh37
+cd /root/persistent/ref_panels/hg19_GRCh37
 
+if [ ! -f 00-All.vcf.gz ]; then
 wget https://ftp.ncbi.nlm.nih.gov/snp/organisms/human_9606_b151_GRCh37p13/VCF/00-All.vcf.gz
 wget https://ftp.ncbi.nlm.nih.gov/snp/organisms/human_9606_b151_GRCh37p13/VCF/00-All.vcf.gz.tbi
+fi
 
 echo -e "chr\tpos\tref\talt\trsid" > variant_map_b37.tsv
 bcftools query \
